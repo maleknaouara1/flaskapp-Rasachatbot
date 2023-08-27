@@ -1,0 +1,36 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-begin",
+      "2": "I-begin",
+      "3": "L-begin",
+      "4": "U-begin",
+      "5": "B-end",
+      "6": "I-end",
+      "7": "L-end",
+      "8": "U-end",
+      "9": "B-time_frame",
+      "10": "I-time_frame",
+      "11": "L-time_frame",
+      "12": "U-time_frame",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-begin": 1,
+      "I-begin": 2,
+      "L-begin": 3,
+      "U-begin": 4,
+      "B-end": 5,
+      "I-end": 6,
+      "L-end": 7,
+      "U-end": 8,
+      "B-time_frame": 9,
+      "I-time_frame": 10,
+      "L-time_frame": 11,
+      "U-time_frame": 12,
+      "O": 0
+    },
+    "num_tags": 13
+  }
+]

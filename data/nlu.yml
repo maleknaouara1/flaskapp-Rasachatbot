@@ -1,0 +1,213 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - hey there
+    - let's go
+    - hey dude
+    - good afternoon
+ 
+- intent: provide_worked_days 
+  examples: |
+     - 2. 
+     - this is the number of days worked 8  .
+     - in this month they worked 9 days.
+     - 10
+     - just 3  days only.
+     - during this month, they worked 26 days. 
+     - in this week , we worked 6 days.
+     - but in this we just worked 5 days.
+
+
+- intent: salutation 
+  examples: |
+    - greeting 
+    - good morning
+    - good evening
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye 
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent : efficiency_per
+  examples: |
+    - can you give me the efficiency per [month](time_frame) .
+    - can you give me the efficiency per [day](time_frame). 
+    - calculate the efficiency per [week](time_frame).
+    - calculate the efficiency per [day](time_frame).
+    - I want to know the efficiency per [week](time_frame).
+    - I want to know the efficiency per [day](time_frame).
+
+
+
+
+- intent:  present_the_features
+  examples: |
+    - what are you presenting?
+    - what do you got?
+    - what are you doing? 
+    - What do you propose?
+    - Can you give me a sense of what you are presenting?
+    - What are your products or services?
+
+- intent : efficiency 
+  examples: | 
+     - can you give me the efficiency ?
+     - I want to calculate the efficiency 
+     - can you tell me the efficiency of the employee ?
+     - how can I calculate the efficiency of employees 
+     - give options for calculating efficiency 
+     - options for calculation 
+     - give the efficiency 
+     - calculate the efficiency 
+     - efficiency of the employee
+     - efficiency calculation
+     - provide efficiency 
+     - please give the efficiency 
+
+- intent : errors 
+  examples: | 
+     - can you give me the errors ?
+     - I want to calculate the errors 
+     - can you tell me the errors in the database ?
+     - how can I see the errors  in the database 
+     - I want to know the mistakes in the data base please ?
+
+
+
+- intent : confirmation
+  examples: |
+   - Agreed
+   - ok 
+   - of course
+   - well 
+
+- intent : nothing
+  examples: |
+    - nothing
+    - all is well
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: thank
+  examples: |
+    - thank you
+    - thanks
+    - thank you very much
+    - be great
+    - thank you, bye
+    - thanks by 
+
+- intent : provide_employee_id
+  examples: |
+   - 10001
+   - 19622
+   - Give me the efficiency for employee ID 10001
+   - What's the data for employee 20554?
+   - Tell me about employee with ID 10003
+   - 10005
+   - 70145
+
+
+
+- intent : provide_specific_date
+  examples: |
+    - this is the date 2022-09-10
+    - 2022-09-15
+    - 2023-11-09
+    - 2022-01-13
+    - 22/10/2015
+    - 1-10-2023
+    - 2023-01-01
+
+
+- intent : efficiency_per_week1
+  examples: |
+   - What was the overall efficiency for the [week](time_frame) ?
+   - How productive were the employees throughout the [week](time_frame) ?
+   - Provide me the weekly efficiency for the [week](time_frame) .
+   - I want to  calculate the efficiency of this  [week](time_frame) . 
+   - What is the  efficiency of the team for the [week](time_frame) ?
+   - Compare the efficiency of different teams for the [week](time_frame) .
+   - Can you show me the efficiency  of the [week](time_frame) ?
+   - What was the efficiency of employees for the [week](time_frame)?"
+   - Give me the weekly efficiency report for the [week](time_frame).
+   - Provide me the efficiency for the [week](time_frame) .
+   - How productive were we  in that [week](time_frame) ?
+   - What is the efficiency for the [week](time_frame) ?
+   - I want to know the efficiency on the [week](time_frame) .
+   - What was the efficiency on this [week](time_frame)?
+   - Give me the efficiency in the [week](time_frame) .
+
+- intent : efficiency_per_month1
+  examples: |
+    - Give me the efficiency for all the  days in [month](time_frame).
+    - How productive were the employees throughout [month](time_frame)?
+    - Provide me the monthly efficiency for [month](time_frame).
+    - I want to know the efficiency on the 1st of [month](time_frame).
+    - Tell me the efficiency for the entire [month](time_frame).
+    - What is the average efficiency of the team for [month](time_frame)?
+    - Compare the efficiency of different teams for [month](time_frame).
+    - Can you show the efficiency trend for [month](time_frame)? 
+    - What was the efficiency of employee John in [month](time_frame)?
+    - Give me the monthly efficiency report for [month](time_frame).
+    - Provide me the efficiency per day for [month](time_frame).
+    - how productive were we on the 15th of [month](time_frame)?
+    - What is the efficiency for [month](time_frame)?
+    - I want to know the efficiency on [month](time_frame).
+    - Tell me the efficiency for the entire [month](time_frame).
+    - Compare the efficiency of different teams for [month](time_frame).
+    - Can you show the efficiency trend for [month](time_frame)?"
+    - What was the efficiency during [month](time_frame)?"
+    
+
+- intent : efficiency_per_day1
+  examples: |
+    - What was the efficiency of [day](time_frame)?
+    - Give me the efficiency [day](time_frame).
+    - How productive were the employees on the [day](time_frame)?
+    - Provide me the efficiency for the [day](time_frame).
+    - I want to know the efficiency on the [day](time_frame).
+    - Tell me the efficiency for the [day](time_frame).
+    - What is the average efficiency of the [day](time_frame).
+
+- intent : provide_date_begin_end
+  examples : |
+     - from 2022-11-30 to 2022-12-30
+     - beginning from 2023-02-02 until 2023-03-02
+     - start from  2023-05-05 Ending with 2023-05-12
+     - Commencing from the date 2022-08-20to 2022-08-13
+     - Starting as of 2023/04/13 Terminating on 2023-10-25.
+     - from 2023-12-11 to 2023-12-18.
+
+
+
+
+- intent : out_of_scope 
+  examples : | 
+   - I have nothing to do.
+   - I am sick.
+   - In short.
+   - Need service.

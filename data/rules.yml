@@ -1,0 +1,57 @@
+version: "3.1"
+
+rules:
+#- rule: Say "Good morning" anytime
+#  steps:
+# - intent: greet
+# - action: action_greet
+# - action: action_listen
+
+- rule: Say "Good morning" anytime
+  steps:
+  - intent : greet
+  - action : action_greet
+  - action : action_listen
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say You are welcome  anytime the user says thank you
+  steps:
+  - intent: thank
+  - action: utter_thank
+- rule : say 'help' anytime the user says non
+  steps:
+  - intent : deny
+  - action :  utter_help
+
+- rule : say 'ok' anytime the user says yes
+  steps : 
+  - intent : confirmation
+  - action : utter_confirmation
+- rule : say "perfect" anytime the user say nothing 
+  steps:
+  - intent : nothing
+  - action : utter_nothing
+
+- rule : date begin end  
+  steps : 
+      - intent : provide_date_begin_end
+      - action : date 
+      - action : utter_worked_days
+      
+
+####
+- rule: Greet and Choose Option
+  steps:
+    - intent: salutation
+    - action: utter_greeting
+    - action: utter_info
+
+
+
+  
+    
+    

@@ -1,0 +1,189 @@
+version: "3.1"
+
+intents:
+  - salutation
+  - greet
+  - present_the_features
+  - goodbye
+  - confirmation 
+  - nothing
+  - deny
+  - thank
+  - provide_employee_id
+  - provide_specific_date  
+  - out_of_scope
+  - efficiency 
+  - errors 
+  - efficiency_per
+  - efficiency_per_day1
+  - efficiency_per_week1
+  - efficiency_per_month1
+  - provide_date_begin_end
+  - provide_worked_days
+
+  
+
+
+entities:
+  - time_frame 
+  - error 
+  - efficiency 
+  - employee_id
+  - begin 
+  - end 
+  - specific_date 
+  - worked_days
+
+
+
+
+slots :
+  time_frame : 
+    type: categorical 
+    values : 
+      - month 
+      - week 
+      - day 
+    mappings: 
+    - type : custom
+      entity : get_efficiency_choice 
+  employee_id :
+    type: text  
+    mappings:
+    - type : custom
+      action : action_get_employee_id
+  specific_date : 
+    type : text 
+    mappings : 
+     - type : custom
+       action : action_get_specific_date  
+  errors:
+    type : text 
+    mappings : 
+     - type : custom
+       action :  get_errors
+  efficiency :
+    type : text 
+    mappings : 
+     - type : custom
+       action :  get_efficiency
+  begin :
+    type : text 
+    mappings : 
+     - type : custom
+       action :  date 
+  end :
+    type : text 
+    mappings : 
+     - type : custom
+       action : date
+  efficiency_day: 
+     type : text 
+     mappings : 
+      - type : custom
+        action : get_efficiency_day
+  worked_days :
+    type : text 
+    mappings : 
+      - type : custom
+        action : action_get_employee_id 
+
+
+    
+    
+
+  
+ 
+
+      
+
+
+      
+
+responses:
+  utter_greeting:
+  - text : "Hello and welcome to kaschke! I am your virtual assistant."
+  utter_salutation:
+  - text : "Hello! how can I help you ? "
+  utter_info :
+  - text : > 
+     I am delighted to be able to help you and accompany you through the different options available:    
+    buttons : 
+    - title : "efficiency"
+      payload : '/efficiency'
+    - title : " errors "
+      payload : '/errors'
+  utter_calculation_efficiency: 
+  - text: >  
+     the calculation of efficiency per: 
+    buttons : 
+    - title : "month"
+      payload : '/efficiency_per_month1'
+    - title : "week"
+      payload : '/efficiency_per_week1'
+    - title : "day"
+      payload : '/efficiency_per_day1'
+  utter_goodbye:
+  - text: "Bye"
+  utter_thank:
+  - text : "You’re welcome! Do you have any other questions?"
+  utter_test :
+  - text : "correct"
+  utter_confirmation: 
+  - text: "All right, how can I help you now?"
+  utter_help: 
+  - text: "Okay, feel free to ask me more questions if you need further clarification or information!"
+  utter_nothing:
+  - text: "Perfect!"
+  utter_request_id_employee:
+  - text : "Could you give me an employee ID so I can send you the employee’s efficiency?"
+  utter_ask_date : 
+  - text : "Correct."
+  utter_efficiency_per_month : 
+  - text : "To calculate the efficiency per month, you should provide an ID of the employee , the start date and the end date of the month."
+  utter_efficiency_per_week :
+  - text : "To calculate the efficiency per week, you should provide an ID of the employee, the start date and the end date of the week." 
+  utter_efficiency_per_day : 
+  - text : "To calculate the efficiency per day, you should provide an ID of the employee  and the specific Date."
+  utter_get_id :
+  - text : "Give me the ID of employee"
+  
+  utter_date_begin_end  :
+  - text : "Give me from date beginning to date ending  "
+  utter_efficiency_day : 
+  - text : " Certainly, I'll proceed with the efficiency per day calculation . "
+  utter_efficiency :
+  - text : " Certainly, I'll proceed with the efficiency calculation.  "
+  #utter_default : 
+  #- text : "I’m sorry, I didn’t understand your request"
+  utter_worked_days : 
+  - text : "please provide the number of worked days."
+
+
+
+  
+actions:
+ - action_get_employee_id
+ - get_errors
+ - action_greet
+ - action_get_specific_date
+ - get_efficiency 
+ - utter_get_id
+ - utter_request_id_employee
+ - get_efficiency_choice
+ - utter_efficiency_per_week
+ - utter_efficiency_per_day
+ - utter_efficiency_per_month
+ - date 
+ - utter_date_begin_end
+ - get_efficiency_day
+ - action_deactivate_slot_extraction
+
+ 
+ 
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+  

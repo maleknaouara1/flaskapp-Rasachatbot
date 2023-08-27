@@ -1,0 +1,36 @@
+[
+  {
+    "text": "in this week , we worked 6 days.",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "time_frame",
+        "start": 8,
+        "end": 12,
+        "confidence_entity": 0.9128085374832153,
+        "value": "week",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "have a nice day",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "time_frame",
+        "start": 12,
+        "end": 15,
+        "confidence_entity": 0.9979786276817322,
+        "value": "day",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  }
+]

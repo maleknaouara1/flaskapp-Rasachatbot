@@ -1,0 +1,18 @@
+[
+  {
+    "text": "2.",
+    "intent": "provide_worked_days",
+    "intent_prediction": {
+      "name": "provide_employee_id",
+      "confidence": 0.8114184737205505
+    }
+  },
+  {
+    "text": "10",
+    "intent": "provide_worked_days",
+    "intent_prediction": {
+      "name": "provide_employee_id",
+      "confidence": 0.8114184737205505
+    }
+  }
+]

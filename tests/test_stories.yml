@@ -1,0 +1,81 @@
+version: "3.1"
+
+
+
+
+stories:
+  
+
+  - story: efficiency calculation 
+    steps:
+      - intent : efficiency 
+      - action : utter_calculation_efficiency
+      
+  
+
+  - story : efficiency choice 
+    steps :
+     - intent : efficiency_per 
+     - action : get_efficiency_choice
+  
+
+
+  - story: User Chooses Efficiency Calculation day 
+    steps:  
+      - intent : efficiency_per_day1
+      - action : utter_efficiency_per_day
+      - action : utter_request_id_employee
+      - intent : provide_employee_id
+      - action : action_get_employee_id  
+      
+  - story : specific date day
+    steps :
+     - intent : provide_specific_date
+     - action : action_get_specific_date
+     - action : utter_efficiency_day 
+     - action : get_efficiency_day    
+  
+ 
+
+      
+    
+
+  - story: User Chooses Efficiency Calculation - Month
+    steps:
+      - intent : efficiency_per_month1 
+      - action : utter_efficiency_per_month  
+      - action : utter_request_id_employee
+      - action : utter_date_begin_end
+      - intent : provide_employee_id 
+      - action : action_get_employee_id
+      
+  - story : calculate efficiency 
+    steps : 
+      - intent : provide_worked_days
+      - action : action_get_employee_id
+      - action : utter_efficiency
+      - action : get_efficiency
+      
+
+  - story: User Chooses Efficiency Calculation - week
+    steps:
+      - intent: efficiency_per_week1
+      - action : utter_efficiency_per_week
+      - action : utter_request_id_employee
+      - intent : provide_employee_id 
+      - action : action_get_employee_id
+      
+
+
+  - story: User Chooses Error Calculation
+    steps:
+      - intent : errors 
+      - action: get_errors
+      
+
+  - story : toutes les features 
+    steps : 
+      - intent : present_the_features 
+      - action : utter_info 
+
+  

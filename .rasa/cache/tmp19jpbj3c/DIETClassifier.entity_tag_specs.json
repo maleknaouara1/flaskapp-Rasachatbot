@@ -1,0 +1,36 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-employee_id",
+      "2": "I-employee_id",
+      "3": "L-employee_id",
+      "4": "U-employee_id",
+      "5": "B-specific_date",
+      "6": "I-specific_date",
+      "7": "L-specific_date",
+      "8": "U-specific_date",
+      "9": "B-time_frame",
+      "10": "I-time_frame",
+      "11": "L-time_frame",
+      "12": "U-time_frame",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-employee_id": 1,
+      "I-employee_id": 2,
+      "L-employee_id": 3,
+      "U-employee_id": 4,
+      "B-specific_date": 5,
+      "I-specific_date": 6,
+      "L-specific_date": 7,
+      "U-specific_date": 8,
+      "B-time_frame": 9,
+      "I-time_frame": 10,
+      "L-time_frame": 11,
+      "U-time_frame": 12,
+      "O": 0
+    },
+    "num_tags": 13
+  }
+]

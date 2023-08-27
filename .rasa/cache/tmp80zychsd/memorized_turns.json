@@ -1,0 +1,32 @@
+{
+  "lookup": {
+    "eJyLrq6NBQAEOAGx": "action_listen",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3xEohNS0tMzkzNS+5srY2FgB4Mx2D": "utter_calculation_efficiency",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3xEohNS0tMzkzNS+5spaAQaUlJalF8cmJOcmlOYlgcSS9eM2NBQB5cz9/": "action_listen",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3xEohNS0tMzkzNS+5Mr4gtai2NhYA8d0fKQ==": "get_efficiency_choice",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3xEohNS0tMzkzNS+5Mr4gtaiWgGHpqSXxSDqSM/Izk1MJGxoLAK9kP7M=": "action_listen",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3xEoBqLMYyIgvyUiNT0tNLCkF8mtrYwG36CHN": "utter_info",
+    "eJyNjEEKgDAMBL+SB/iCfkUkFEkxoKm0Wy+lfzegd73NwOzOfUzUzyIXxxWaLVB/gC0eEuiVXSvEvG1Vijdqrgjky+rA2ISTRDT38XHZACmslvLfv+UGEc9AvA==": "action_listen",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3xEohtagov6i4tjYWAAZgHAs=": "get_errors",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3xEohtagov6i4loAh6akl8VCVOE2IBQCAJDU1": "action_listen",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3xEohNS0tMzkzNS+5Mr4gtSg+JbHSsLY2FgCSISD3": "utter_efficiency_per_day",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3xEohNS0tMzkzNS+5Mr4gtSg+JbHSsJaAiaUlJUCVmBqJNDwWABCkRLw=": "utter_request_id_employee",
+    "eJytjEEKwyAQRa/iAbLJ1quUMoh+YSCZWB0LIt69QrPLIl109x+8/x59LKanjDc5r3yINf07SNwOa07YuChkurUgT4dlolqDGNkzxDdKyBRcW8dNsapO83r8YzzjVVGUOBD2tB0N+LH+/AADgmkd": "action_listen",
+    "eJytkEEKwyAQRa/iAbLp1quUMIj+wECidhwDIt69Qks3XWST3Xx4/32YZx+L6VlwkvPKKVrTPwdFd8Cab9i5KOJka4FMhuOMag22jT0j+kYZQsG1x7gwVtVJ/hdvlAteFUWJA+HIe2rALfaLZ2RJJwf8Nuf+GOsbuCuIvg==": "action_get_employee_id",
+    "eJytkEEKwyAQRa/iAbrp1quUMoj+lIFErY4Bkdy9Ay2F0kWyyG4+vP8+zG1sFzNywUrOC6dozXgfFN0Caz5h5iqIyraKogxHjWINpok9I/pOGYWC69dtx9hElPwvnigveDZUIQ6EJc+pA6fYd56RS1o54Lup+weND8hP65j6/gKRC6v7": "utter_ask_date",
+    "eJytkMEKwyAQRH/FD+ilV3+lFBGdlKWJWl0DEvLvXUgolAbSg7cdmHnD7G1ZL2pJGbOxjikGrZbtMMFO0GoXIxVGEG8tyOKhIJK1wjCQIwTXTEI23rbrekKszOL8DXaEZ7wqChvyBlMaYwO60E+ekXKcyePTKf1/Eh/gr1QP9PYKW54yjQ/2HyLvb38ny/8=": "action_listen",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3xEohNS0tMzkzNS+5Mr4gtSi+PDU127C2NhYAs+MhZQ==": "utter_efficiency_per_week",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3xEohNS0tMzkzNS+5Mr4gtSi+PDU127CWgJGlJSVApVh0Emt8LADoi0YG": "utter_request_id_employee",
+    "eJytjEEKgzAQRa+SA3TTba5SyiDxB4bqJCaTlhC8ewO6FHTh7j94/73a+jAtJnxpcMpBrGnbIBlmWLPDxFkh3S0ZqTssHdUaeM+OIa5SRKIf8HmuJ8mi2tWD5535hKUgK/FImOMUKnA1//4Dv9Zq1Q==": "action_listen",
+    "eJytkEEKwzAMBL/iB/TSq78SigjOBkQT25HllGD89wpaeirkkpsWRiOxQ+s317JgpzEop+hd+wwUxxXefcPCRRGNrQViDEeL6h3mmQMjhoMyhF7A895PlFXV0D+bV+oFW0VR4omw5iUdwDX6k0KypJ0n/I7aA70/3gGNinY=": "action_get_employee_id",
+    "eJytkNEKwjAMRX+lH+CLr/0VkTC6OwluaW3TySj7dwOKIAjbw95y4dyTkEtbT66ljJm6oBzFu/YeSLoJ3n3CyEUhxtaCbAyLRfUOw8CBIWGhhExP4H5eN5RV1dA/zSP1GY+KosQ9YUpjXIBj9BsPSTnO3OO71A7YabxBf1r71NcXdtWtsw==": "utter_date_begin_end",
+    "eJytkMEKgzAQRH8lH9BLr/5KKUtqRlmqmzTZWET8dwOWQqGgh9x2YObNMrdlvZglRExkW2UvjVn2g8SOaMxHDJwUUrw5IRYPS5HaGHQdtwxpZwqI9Aae1/UAmVWL9U+yJj7ilZGU2BHGMPgZqIM/GCREP7HDt7Q8cJLYQ39SNdD7Fs4q6IGehSBnwfcNz1jQEw==": "action_listen",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3xEohNS0tMzkzNS+5Mr4gtSg+Nz+vJMOwtjYWANYzId8=": "action_set_time_frame",
+    "eJyNjFEKgCAQBa/iAfrp16tELCJPWshVdAtCvHtCHcC/N49httYX03LBTc4rJ7GmfYPERVjzw8lVIcO9KspwWAaqNQiBPUP8QxmFYhI91j7XrFBSjqBQxj3d3l9c80VC": "utter_efficiency_per_month",
+    "eJytjbEKgDAQQ3+lH+Di2l8ROUpJ8cCe0p6CFP/dAx0dHNyS8JIM7excWwt2ClF5Ee/aLUhChnePmbkqxNitohjDYla9Q0ocGRIPWlEoL6JTf37brFBSzqBULP5pe1M19q36+WC8ALsZatc=": "utter_request_id_employee",
+    "eJytj7EKwzAMRH/FH9Clq3+lFBHcMxXEsivLhWDy7xW0Y4cM2XTi3R13m/slzKZ405KMq8QwvwfJUhDDT6zcDeLs6FBnWFxaDMiZE0PSRg1KpYo9r/uxzA4j4wLK6u+TsoeZs/+spxYoXgPdiB+E0ta64fiA+wfNVpAg": "action_listen",
+    "eJytkEEKAyEMRa/iAbrp1quUEgbnSwNjtBoHBvHuFTp0VWgX7vLDy/9Jbq1fTEsZOy1OOYo17V2QLAHWnGLjopDB1oI8GJYh1Rp4z44h7qCETCGKPq79P88CJeUA8nm0J3lX1cF+G50akPGsKEq8EkLa4oFZB/x4eMpx5xWf1LFB7/cXAcevwQ==": "action_get_employee_id",
+    "eJytUEsKAjEMvUoP4MZtryIShs6rBqYf23RgGObuBhRxIdhFd3nhfZJ32Y+T2XPBSpMTTtGa/TVQnAKseYOFqyAqt1UU5XBUKNbAe3aM6DbKKBRSlPv56POsEBIOIF90Pci7iSj3l3RoQMGjoQrxTAh5SRtGPfCn8FzSyjM+qXpBp+NN6/5W9Vlfn7l70v4=": "utter_date_begin_end",
+    "eJytkEEKg0AMRa8yB+im27lKKcHq1waczHQmCiLevQGldFGoi9nlh5+X5N/W7eLWlDFT0ypH8W7dC5ImwLtDjFwUYt6pIJuHxaR6h77nliHtQgmZQhR9XrdzzAIl5QDqs7UrsSdV8/4arbog4zWhKHFHCGmMC2o98CfwlOPMHT5b7YKTxMHi/p6qgd7D6BoFPTCwEOQs+P4GCeP1Xg==": "action_listen"
+  }
+}

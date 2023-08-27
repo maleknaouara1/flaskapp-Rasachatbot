@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Database Page</title>
+    <link rel="icon" href="{{ url_for('static', filename='Kashcke (1).jpg') }}" type="image/x-icon">
+    <title>Database Page</title>
+    <link rel="icon" href="{{ url_for('static', filename='Kashcke (1).jpg') }}" type="image/x-icon">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        .title {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        table {
+            width: 80%;
+            border-collapse: collapse;
+            margin: 20px auto;
+            background-color: #fff;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tr:hover {
+            background-color: #ddd;
+        }
+        .red-cell {
+            color: red;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="title"></div>
+       <h1>Database Content</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>VERKETTEN</th>
+                <th>Departement</th>
+                <th>person</th>
+                <th>Name</th>
+                <th>Material</th>
+                <th>Order</th>
+                <th>Activity</th>
+                <th>Operation_short_text</th>
+                <th>Quantity</th>
+                <th>date</th>
+                <th>downtime</th>
+                <th>Remarks</th>
+                <th>Performance_H</th>
+                <th>Produced_Hours</th>
+                <th>pointing</th>
+                <th>efficiency_per_day</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Loop through your data and populate the rows -->
+            {% for row in data %}
+            <tr>
+                <td>{{ row.VERKETTEN }}</td>
+                <td>{{ row.Departement }}</td>
+                <td>{{ row.person }}</td>
+                <td>{{ row.Name }}</td>
+                <td>{{ row.Material }}</td>
+                <td>{{ row.Order }}</td>
+                <td>{{ row.Activity }}</td>
+                <td>{{ row.Operation_short_text }}</td>
+                <td>{{ row.Quantity }}</td>
+                <td>{{ row.date }}</td>
+                <td>{{ row.downtime }}</td>
+                <td>{{ row.Remarks }}</td>
+                <td>{{ row.Performance_H }}</td>
+                <td>{{ row.Produced_Hours }}</td>
+                <td>{{ row.pointing }}</td>
+                <td {% if row.efficiency_per_day is none %}class="red-cell"{% endif %}>
+                    {{ row.efficiency_per_day }}
+                </td>
+                
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

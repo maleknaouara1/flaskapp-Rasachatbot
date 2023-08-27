@@ -1,0 +1,20 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-time_frame",
+      "2": "I-time_frame",
+      "3": "L-time_frame",
+      "4": "U-time_frame",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-time_frame": 1,
+      "I-time_frame": 2,
+      "L-time_frame": 3,
+      "U-time_frame": 4,
+      "O": 0
+    },
+    "num_tags": 5
+  }
+]

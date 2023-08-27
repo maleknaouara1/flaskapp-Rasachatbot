@@ -1,0 +1,106 @@
+[
+  {
+    "text": "good afternoon",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.9965544939041138
+    }
+  },
+  {
+    "text": "2.",
+    "intent": "provide_worked_days",
+    "intent_prediction": {
+      "name": "provide_employee_id",
+      "confidence": 0.9307725429534912
+    }
+  },
+  {
+    "text": "can you give me the efficiency per month .",
+    "intent": "efficiency_per",
+    "intent_prediction": {
+      "name": "efficiency_per_month1",
+      "confidence": 0.9761804938316345
+    }
+  },
+  {
+    "text": "I want to  calculate the efficiency of this  week .",
+    "intent": "efficiency_per_week1",
+    "intent_prediction": {
+      "name": "efficiency",
+      "confidence": 0.7402551770210266
+    }
+  },
+  {
+    "text": "Starting as of 2023/04/13 Terminating on 2023-10-25.",
+    "intent": "provide_date_begin_end",
+    "intent_prediction": {
+      "name": "provide_specific_date",
+      "confidence": 0.6922205686569214
+    }
+  },
+  {
+    "text": "have a nice day",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "efficiency_per_day1",
+      "confidence": 0.9857650399208069
+    }
+  },
+  {
+    "text": "be great",
+    "intent": "thank",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.5279137492179871
+    }
+  },
+  {
+    "text": "Give me the efficiency for employee ID 10001",
+    "intent": "provide_employee_id",
+    "intent_prediction": {
+      "name": "efficiency",
+      "confidence": 0.5042440891265869
+    }
+  },
+  {
+    "text": "let's go",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.36541640758514404
+    }
+  },
+  {
+    "text": "Give me the efficiency day.",
+    "intent": "efficiency_per_day1",
+    "intent_prediction": {
+      "name": "efficiency_per",
+      "confidence": 0.6239332556724548
+    }
+  },
+  {
+    "text": "from 2022-11-30 to 2022-12-30",
+    "intent": "provide_date_begin_end",
+    "intent_prediction": {
+      "name": "provide_specific_date",
+      "confidence": 0.4942235052585602
+    }
+  },
+  {
+    "text": "10",
+    "intent": "provide_worked_days",
+    "intent_prediction": {
+      "name": "provide_employee_id",
+      "confidence": 0.928909957408905
+    }
+  },
+  {
+    "text": "22/10/2015",
+    "intent": "provide_specific_date",
+    "intent_prediction": {
+      "name": "provide_date_begin_end",
+      "confidence": 0.7938452959060669
+    }
+  }
+]

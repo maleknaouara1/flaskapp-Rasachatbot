@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Welcome to Kaschke</title>
+    <link rel="icon" href="{{ url_for('static', filename='Kashcke (1).jpg') }}" type="image/x-icon">
+
+    <style>
+      
+      .navbar {
+  background-color: transparent; /* supprimez la couleur de fond existante */
+  position: absolute; /* position absolue pour recouvrir le fond d'écran */
+  top: 5%; /* aligner en haut de la page */
+  width: 100%; /* prendre toute la largeur de la page */
+  z-index: 1; /* placer le navbar en haut de la pile de calques */
+}
+
+      .navbar a {
+        color: rgb(16, 99, 28);
+        text-decoration: none;
+        font-size: 20px;
+        margin-right: 20px;
+        padding: 15px 15px;
+        top: 50%;
+        font-family: "Gill Sans", sans-serif;
+        float: right;
+      }
+      .logo {
+        background-color: transparent;
+        float: left;
+        margin-left: 20px;
+        width: 8%;
+        position: fixed;
+       
+      }
+      .content {
+        position: fixed;
+        top: 50%;
+        right: 50px;
+        transform: translateY(-50%);
+        color: rgb(6, 3, 3);
+        font-size: 12px;
+        text-align: center;
+        font-family: "Gill Sans", sans-serif;
+        width : 25% ; 
+
+      }
+     
+      button {
+        border: 2px solid rgb(16, 99, 28);
+        padding: 10px 20px;
+        background-color:transparent;
+        color: rgb(16, 99, 28);
+        font-weight: bold;
+        font-size: 14px;
+        border-radius: 5px;
+        align-items: center;
+        align-content: center;
+        
+      }
+      .content p {
+        text-align: justify;
+        }
+        #chatbot-container{
+  width: 95%;  
+  padding: 3px 10px;
+  align-items: center;
+  font-size: 17px;
+  justify-content: flex-start;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;   
+  max-width: 370px;
+  max-height: 80px;
+  position: fixed;
+  right: 20px;
+  z-index: 1000;
+ 
+}
+
+#confirmation-dialog {
+  
+  width: 20%;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  background-color: #e0dcdc;
+  border: rgb(0, 0, 0) solid 2px ;
+  border-radius: 10px;
+ font-size: 14px;
+ color :rgb(0, 0, 0);
+ float: right;
+ margin-right: 20px;
+ margin-bottom: 80px;
+ margin-top: 16%;
+ position: relative;
+  z-index: 9999;
+}
+
+#show-chatbot-again-btn{
+  background-color: rgb(16, 99, 28);
+  align-items: center;
+  
+  position: absolute; /* fixe le bouton à l'écran */
+  bottom: 20px; /* déplace le bouton en bas de la page */
+  right: 20px; /* déplace le bouton à droite de la page */
+   /* supprime la marge par défaut du bouton */
+  
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgb(16, 99, 28);
+  color: white;
+  text-align: center;
+  line-height: 50px;
+}
+.chart-container {
+            position: fixed;
+            top: 60%;
+            left: 60px; /* Adjust the distance from the left side */
+            transform: translateY(-50%);
+            z-index: 900;
+        }
+
+        /* Style the chart image */
+.chart-container img {
+            max-width: 100%; /* Ensure the chart scales responsively */
+        }
+@media screen and (max-width: 768px) {
+            .chart-container {
+                left: 20px; /}}
+    </style>
+  </head>
+  <body>
+  
+
+    <div class="navbar">
+      <div>
+        <a href="/database">Database</a>
+        <a href="/top_efficiencies">Top Efficiencies</a>
+        <a href="/errors">Errors</a>
+        <a href="#">Home</a>
+        <img src="{{ url_for('static', filename='Kashcke (1).jpg') }}" alt="mon_logo" class="logo">
+      </div>
+    </div>
+    
+
+    <div class="content">
+     
+      <p>
+        The chatbot is a virtual assistant with artificial intelligence that allows you to respond instantly to your requests
+      </p>
+      <p>
+        Whether you require identifying errors in your database or calculating the efficiency of any employee over a month, week, or day, our chatbot is available to fulfill your needs.
+      </p>
+      <p>
+        Our chatbot is the ideal partner to simplify your daily life and offer you an exceptional experience.
+      </p>
+      <button id="show-chatbot-btn">Access to the chatbot</button>
+    
+    </div>
+    <div id="chatbot-container">
+
+    </div>
+    <div id="confirmation-dialog" style="display: none;">
+      <p>Are you sure you want to close the chatbot?</p>
+      <button class="b1" onclick="hideConfirmationDialog()">cancel</button>
+      <button class="b2" onclick="hideChatbotFermer()">close</button>
+    </div>
+    <div class="chart-container">
+      <!-- Chart container -->
+      <h1>Average Efficiency per Department</h1>
+      <img src="{{ chart_path }}" alt="Efficiency Chart">
+    </div>
+    <div>
+      <button id="show-chatbot-again-btn" style="display:none;">
+        <img src="{{ url_for('static', filename='robot_icon2.png') }}" alt="icone" class="icone" width="30" style=" left: 50%; transform: translateX(10%); margin-bottom: 10px;">
+      
+      </button>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+     $(document).ready(function() {
+      
+  // Masquer le conteneur du chatbot initialement
+  $('#chatbot-container').hide();
+
+  // Afficher le chatbot quand on clique sur le premier bouton
+  $('#show-chatbot-btn').click(function() {
+    
+    $.ajax({
+      url: '/get_chatbot', // L'URL de la route Flask pour récupérer le contenu HTML du chatbot
+      success: function(data) {
+       
+        $('#chatbot-container').html(data); // Ajouter le contenu HTML dans le conteneur
+        $('#chatbot-container').show(); // Afficher le conteneur du chatbot
+        $('.content').hide(); // Masquer le contenu
+        $('#show-chatbot-again-btn').hide();
+      
+      }
+    });
+  });
+
+  // Fonction pour masquer le chatbot
+  function hideChatbot() {
+   
+    $('#chatbot-container').hide(); // Masquer le conteneur du chatbot
+    $('#show-chatbot-again-btn').show(); // Afficher le bouton pour afficher à nouveau le chatbot
+    $('.content').show(); // Afficher le contenu
+   
+    
+  }
+
+  // Fonction pour afficher à nouveau le chatbot
+  $('#show-chatbot-again-btn').click(function() {
+    $('#chatbot-container').show(); // Afficher le conteneur du chatbot
+    $('#show-chatbot-again-btn').hide(); // Masquer le bouton pour afficher à nouveau le chatbot
+    $('.content').hide(); // Masquer le contenu
+    
+  });
+
+  // Fonction pour fermer le chatbot
+  $('#chatbot-close-btn').click(function() {
+    $('#chatbot-container').hide(); // Masquer le conteneur du chatbot
+    $('#show-chatbot-again-btn').hide(); // Masquer le bouton pour afficher à nouveau le chatbot
+    $('.content').show(); // Afficher le contenu
+   
+  });
+});
+
+    </script>
+    
+    
+  </body>
+  
+</html>
